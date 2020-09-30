@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
@@ -11,7 +12,7 @@
 
     <LinearLayout
         android:id="@+id/questionslayout"
-        android:layout_width="785dp"
+        android:layout_width="780dp"
         android:layout_height="500dp"
         android:orientation="vertical"
         android:background="#FFFFFF"
@@ -32,55 +33,55 @@
 
             <CheckBox
                 android:id="@+id/checkBox1"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="Muscle/body aches?" />
 
             <CheckBox
                 android:id="@+id/checkBox2"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="Sore throat?" />
 
             <CheckBox
                 android:id="@+id/checkBox3"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="New uncontrolled cough that causes difficulty breathing?" />
 
             <CheckBox
                 android:id="@+id/checkBox4"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="Diarrhea, vomiting or abdominal pain?" />
 
             <CheckBox
                 android:id="@+id/checkBox5"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="New onset of severe headache, especially with fever?" />
 
             <CheckBox
                 android:id="@+id/checkBox6"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="New loss of taste or smell?" />
             <CheckBox
                 android:id="@+id/checkBox7"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="Had close contact with a person with confirmed COVID-19?" />
 
             <CheckBox
                 android:id="@+id/checkBox8"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="Travelled internationally or to a high-risk area?" />
@@ -92,12 +93,26 @@
 
     <LinearLayout
         android:id="@+id/sidelayout"
-        android:layout_width="75dp"
+        android:layout_width="80dp"
         android:layout_height="500dp"
         android:orientation="vertical"
-        android:background="#FFFF00"
+        android:background="#FFFFFF"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"  >
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Submit"
+            android:background="#90c40000"
+            style="?android:attr/borderlessButtonStyle"
+            android:onClick="submit"
+            />
+
+
 
 
 
