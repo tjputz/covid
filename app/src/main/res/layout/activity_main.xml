@@ -153,13 +153,28 @@
         app:layout_constraintLeft_toRightOf="@id/insidelayout"  >
 
         <TextView
+            android:id="@+id/CovidCasesStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="COVID 19 Status"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:background="#000000"
+            />
+
+
+        <TextView
             android:id="@+id/worldCovidCases"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="World Wide Covid Cases"
+            android:text="Global"
             android:textStyle="bold"
-            android:textSize="20dp"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:background="#000000"
             />
 
         <TextView
@@ -169,7 +184,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:text="Total Cases: 1,345,689"
         android:textStyle="bold"
-        android:textSize="16dp"
+        android:textSize="12sp"
         />
         <TextView
             android:id="@+id/worldCovidCasesIncrease"
@@ -178,7 +193,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:text="Total Increase: 345,689"
             android:textStyle="bold"
-            android:textSize="16dp"
+            android:textSize="12sp"
             />
 
 
@@ -188,9 +203,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="U.S. Covid Cases"
+            android:text="United States"
             android:textStyle="bold"
-            android:textSize="20dp"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:background="#000000"
 
             />
 
@@ -201,7 +218,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:text="Total Cases: 445,689"
             android:textStyle="bold"
-            android:textSize="16dp"
+            android:textSize="12sp"
             />
 
         <TextView
@@ -211,7 +228,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:text="Total Increase: 45,689"
             android:textStyle="bold"
-            android:textSize="16dp"
+            android:textSize="12sp"
             />
 
 
@@ -221,9 +238,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="Virginia Covid Cases"
+            android:text="Virginia"
             android:textStyle="bold"
-            android:textSize="20dp"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:background="#000000"
 
             />
 
@@ -234,7 +253,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:text="Total Cases: 445,689"
             android:textStyle="bold"
-            android:textSize="16dp"
+            android:textSize="12sp"
             />
 
         <TextView
@@ -244,7 +263,42 @@
             app:layout_constraintTop_toTopOf="parent"
             android:text="Total Increase: 45,689"
             android:textStyle="bold"
-            android:textSize="16dp"
+            android:textSize="12sp"
+
+            />
+
+        <TextView
+            android:id="@+id/PWCCovidCases"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Prince William County"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:background="#000000"
+
+            />
+
+        <TextView
+            android:id="@+id/PWCCovidCasesNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Total Cases: 445,689"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/PWCCovidCasesIncrease"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Total Increase: 45,689"
+            android:textStyle="bold"
+            android:textSize="12sp"
+
             />
 
     </LinearLayout>
