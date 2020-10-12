@@ -8,9 +8,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import javax.net.ssl.HttpsURLConnection;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
 
 
 
@@ -21,6 +33,56 @@ public class MainActivity extends AppCompatActivity {
 
         final Button submit = findViewById(R.id.submit);
         final SmsManager smgr = SmsManager.getDefault();
+
+        String httpsURL = "https://api.covidtracking.com/v1/states/va/current.json";
+        URL myurl = null;
+        try {
+            myurl = new URL(httpsURL);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        HttpsURLConnection con = null;
+        try {
+            con = (HttpsURLConnection)myurl.openConnection();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        InputStream ins = null;
+        try {
+            ins = con.getInputStream();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        InputStreamReader isr = new InputStreamReader(ins);
+        BufferedReader in = new BufferedReader(isr);
+
+
+        String data = null;
+        try {
+            data = in.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(data);
+
+        JSONObject jsonobject = null;
+        try {
+            jsonobject = new JSONObject(data);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        int deaths = 0;
+        try {
+            deaths = jsonobject.getInt("death");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        System.out.println(deaths);
+
+
+
+
+
 
 
         submit.setOnClickListener(new View.OnClickListener() {

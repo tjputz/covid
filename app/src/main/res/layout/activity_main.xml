@@ -9,14 +9,12 @@
     tools:context=".MainActivity">
 
 
-
     <LinearLayout
         android:id="@+id/leftquestionslayout"
         android:layout_width="match_parent"
         android:layout_height="500dp"
         android:orientation="vertical"
         android:background="#ff888888"
-
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"  >
 
@@ -24,14 +22,11 @@
             android:id="@+id/checkBox0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#ff888888"
             android:textStyle="bold"
             android:textColor="#FFFFFF"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-
             android:text="Temperature 100.4 degrees or higher, chills?" />
-
 
 
             <CheckBox
@@ -39,7 +34,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:background="#ff888888"
                 android:textColor="#FFFFFF"
                 android:layout_marginTop="0dp"
                 android:text="Muscle/body aches?" />
@@ -50,7 +44,6 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:textColor="#FFFFFF"
-                android:background="#ff888888"
                 android:layout_marginTop="0dp"
                 android:text="Sore throat?" />
 
@@ -59,7 +52,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:background="#ff888888"
                 android:textColor="#FFFFFF"
                 android:layout_marginTop="0dp"
                 android:text="New uncontrolled cough that causes difficulty breathing?" />
@@ -69,7 +61,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:background="#ff888888"
                 android:textColor="#FFFFFF"
                 android:layout_marginTop="0dp"
                 android:text="Diarrhea, vomiting or abdominal pain?" />
@@ -79,7 +70,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#FFFFFF"
-                android:background="#ff888888"
                 android:textStyle="bold"
                 android:layout_marginTop="0dp"
                 android:text="New onset of severe headache, especially with fever?" />
@@ -90,7 +80,6 @@
                 android:layout_height="wrap_content"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
-                android:background="#ff888888"
                 android:layout_marginTop="0dp"
                 android:text="New loss of taste or smell?" />
             <CheckBox
@@ -99,7 +88,6 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:textColor="#FFFFFF"
-                android:background="#ff888888"
                 android:layout_marginTop="0dp"
                 android:text="Had close contact with a person with confirmed COVID-19?" />
 
@@ -108,12 +96,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:background="#ff888888"
                 android:textColor="#FFFFFF"
                 android:layout_marginTop="0dp"
                 android:text="Travelled internationally or to a high-risk area?" />
-
-
 
 
     </LinearLayout>
