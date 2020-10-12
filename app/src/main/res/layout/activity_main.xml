@@ -122,7 +122,7 @@
         android:layout_width="match_parent"
         android:layout_height="500dp"
         android:orientation="vertical"
-        android:background="#FFFFFF"
+        android:background="#AAAAAA"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toRightOf="@id/leftquestionslayout"  >
 
@@ -142,6 +142,115 @@
 
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/outsidelayout"
+        android:layout_width="250dp"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        android:background="#AAAAAAAA"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/insidelayout"  >
+
+        <TextView
+            android:id="@+id/worldCovidCases"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="World Wide Covid Cases"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            />
+
+        <TextView
+        android:id="@+id/worldCovidCasesNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Total Cases: 1,345,689"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        />
+        <TextView
+            android:id="@+id/worldCovidCasesIncrease"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Total Increase: 345,689"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            />
+
+
+
+        <TextView
+            android:id="@+id/USCovidCases"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="U.S. Covid Cases"
+            android:textStyle="bold"
+            android:textSize="20dp"
+
+            />
+
+        <TextView
+            android:id="@+id/USCovidCasesNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Total Cases: 445,689"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            />
+
+        <TextView
+            android:id="@+id/USCovidCasesIncrease"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Total Increase: 45,689"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            />
+
+
+
+        <TextView
+            android:id="@+id/VACovidCases"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Virginia Covid Cases"
+            android:textStyle="bold"
+            android:textSize="20dp"
+
+            />
+
+        <TextView
+            android:id="@+id/VACovidCasesNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Total Cases: 445,689"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            />
+
+        <TextView
+            android:id="@+id/VACovidCasesIncrease"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Total Increase: 45,689"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            />
+
+    </LinearLayout>
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
