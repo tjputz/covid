@@ -15,7 +15,8 @@
         android:layout_width="match_parent"
         android:layout_height="500dp"
         android:orientation="vertical"
-        android:background="#FFFFFF"
+        android:background="#ff888888"
+
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"  >
 
@@ -23,7 +24,7 @@
             android:id="@+id/checkBox0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#aa33ee"
+            android:background="#ff888888"
             android:textStyle="bold"
             android:textColor="#FFFFFF"
             app:layout_constraintStart_toStartOf="parent"
@@ -37,8 +38,8 @@
                 android:id="@+id/checkBox1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#aa99cc"
                 android:textStyle="bold"
+                android:background="#ff888888"
                 android:textColor="#FFFFFF"
                 android:layout_marginTop="0dp"
                 android:text="Muscle/body aches?" />
@@ -47,9 +48,9 @@
                 android:id="@+id/checkBox2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#aa33ee"
                 android:textStyle="bold"
                 android:textColor="#FFFFFF"
+                android:background="#ff888888"
                 android:layout_marginTop="0dp"
                 android:text="Sore throat?" />
 
@@ -57,8 +58,8 @@
                 android:id="@+id/checkBox3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#aa99cc"
                 android:textStyle="bold"
+                android:background="#ff888888"
                 android:textColor="#FFFFFF"
                 android:layout_marginTop="0dp"
                 android:text="New uncontrolled cough that causes difficulty breathing?" />
@@ -67,8 +68,8 @@
                 android:id="@+id/checkBox4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#aa33ee"
                 android:textStyle="bold"
+                android:background="#ff888888"
                 android:textColor="#FFFFFF"
                 android:layout_marginTop="0dp"
                 android:text="Diarrhea, vomiting or abdominal pain?" />
@@ -77,8 +78,8 @@
                 android:id="@+id/checkBox5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#aa99cc"
                 android:textColor="#FFFFFF"
+                android:background="#ff888888"
                 android:textStyle="bold"
                 android:layout_marginTop="0dp"
                 android:text="New onset of severe headache, especially with fever?" />
@@ -87,18 +88,18 @@
                 android:id="@+id/checkBox6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#aa33ee"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
+                android:background="#ff888888"
                 android:layout_marginTop="0dp"
                 android:text="New loss of taste or smell?" />
             <CheckBox
                 android:id="@+id/checkBox7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#aa99cc"
                 android:textStyle="bold"
                 android:textColor="#FFFFFF"
+                android:background="#ff888888"
                 android:layout_marginTop="0dp"
                 android:text="Had close contact with a person with confirmed COVID-19?" />
 
@@ -106,8 +107,8 @@
                 android:id="@+id/checkBox8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#aa33ee"
                 android:textStyle="bold"
+                android:background="#ff888888"
                 android:textColor="#FFFFFF"
                 android:layout_marginTop="0dp"
                 android:text="Travelled internationally or to a high-risk area?" />
@@ -122,7 +123,7 @@
         android:layout_width="match_parent"
         android:layout_height="500dp"
         android:orientation="vertical"
-        android:background="#AAAAAA"
+        android:background="#ff888888"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toRightOf="@id/leftquestionslayout"  >
 
@@ -148,7 +149,7 @@
         android:layout_width="250dp"
         android:layout_height="500dp"
         android:orientation="vertical"
-        android:background="#AAAAAAAA"
+        android:background="#ff888888"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toRightOf="@id/insidelayout"  >
 
