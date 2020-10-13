@@ -4,9 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.telephony.SmsManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.TextView;
+
+import com.android.volley.*;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -34,56 +40,10 @@ public class MainActivity extends AppCompatActivity  {
         final Button submit = findViewById(R.id.submit);
         final SmsManager smgr = SmsManager.getDefault();
 
-        String httpsURL = "https://api.covidtracking.com/v1/states/va/current.json";
-        URL myurl = null;
-        try {
-            myurl = new URL(httpsURL);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-        HttpsURLConnection con = null;
-        try {
-            con = (HttpsURLConnection)myurl.openConnection();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        InputStream ins = null;
-        try {
-            ins = con.getInputStream();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        InputStreamReader isr = new InputStreamReader(ins);
-        BufferedReader in = new BufferedReader(isr);
-
-
-        String data = null;
-        try {
-            data = in.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println(data);
-
-        JSONObject jsonobject = null;
-        try {
-            jsonobject = new JSONObject(data);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        int deaths = 0;
-        try {
-            deaths = jsonobject.getInt("death");
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        System.out.println(deaths);
 
 
 
-
-
-
+        final RequestQueue queue = Volley.newRequestQueue(this);
 
         submit.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -109,6 +69,48 @@ public class MainActivity extends AppCompatActivity  {
                 checkBox6.setChecked(false);
                 checkBox7.setChecked(false);
                 checkBox8.setChecked(false);
+
+                String url ="https://api.covidtracking.com/v1/states/va/current.json";
+
+                    Log.d("URL Variable",url);
+
+                // Request a string response from the provided URL.
+                StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                        new Response.Listener<String>() {
+                            @Override
+                            public void onResponse(String response) {
+
+                                JSONObject jsonobject = null;
+                                try {
+                                    jsonobject = new JSONObject(response);
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                                try {
+                                    int deaths = jsonobject.getInt("death");
+
+                                    TextView USDeaths = findViewById(R.id.USCovidCasesNumber);
+                                    USDeaths.setText(deaths);
+                                    Log.d("Deaths Variable", String.valueOf(deaths));
+                                    System.out.println(deaths);
+                                    USDeaths.setText("This");
+
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+
+
+                                // Display the first 500 characters of the response string.
+                                //textView.setText("Response is: "+ response.substring(0,500));
+                            }
+                        }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        //textView.setText("That didn't work!");
+                    }
+                });
+
+
 
             }
 
