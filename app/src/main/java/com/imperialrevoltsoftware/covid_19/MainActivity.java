@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity  {
                                     TextView USDeaths = findViewById(R.id.USCovidCasesNumber);
                                     //USDeaths.setText("Total Positive Cases" + totalpositiveCases);
                                     String totalPositiveCases = String.valueOf(totalpositiveCases);
-                                    USDeaths.setText("Total Positive Cases " + totalpositiveCases);
+                                    USDeaths.setText("Total Positive Cases: " + totalpositiveCases);
                                     Log.d("Deaths Variable", String.valueOf(totalpositiveCases));
                                     //System.out.println(deaths);
                                     //USDeaths.setText("This");
