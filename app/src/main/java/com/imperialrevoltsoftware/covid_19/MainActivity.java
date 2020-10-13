@@ -83,17 +83,20 @@ public class MainActivity extends AppCompatActivity  {
                                 JSONObject jsonobject = null;
                                 try {
                                     jsonobject = new JSONObject(response);
+                                    Log.d("respon", response);
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 }
                                 try {
-                                    int deaths = jsonobject.getInt("death");
+                                    int totalpositiveCases = jsonobject.getInt("positive");
 
                                     TextView USDeaths = findViewById(R.id.USCovidCasesNumber);
-                                    USDeaths.setText(deaths);
-                                    Log.d("Deaths Variable", String.valueOf(deaths));
-                                    System.out.println(deaths);
-                                    USDeaths.setText("This");
+                                    //USDeaths.setText("Total Positive Cases" + totalpositiveCases);
+                                    String totalPositiveCases = String.valueOf(totalpositiveCases);
+                                    USDeaths.setText("Total Positive Cases" + totalpositiveCases);
+                                    Log.d("Deaths Variable", String.valueOf(totalpositiveCases));
+                                    //System.out.println(deaths);
+                                    //USDeaths.setText("This");
 
                                 } catch (JSONException e) {
                                     e.printStackTrace();
@@ -110,7 +113,7 @@ public class MainActivity extends AppCompatActivity  {
                     }
                 });
 
-
+queue.add(stringRequest);
 
             }
 
