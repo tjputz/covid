@@ -44,6 +44,60 @@ public class MainActivity extends AppCompatActivity  {
 
 
         final RequestQueue queue = Volley.newRequestQueue(this);
+        String VAurl ="https://api.covidtracking.com/v1/states/va/current.json";
+
+
+
+        // Request a string response from the provided URL.
+        StringRequest VAstringRequest = new StringRequest(Request.Method.GET, VAurl,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+                        JSONObject jsonobject = null;
+                        try {
+                            jsonobject = new JSONObject(response);
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                        try {
+
+
+                            //State Information
+
+                            int VAtotalPositiveCases = jsonobject.getInt("positive");
+                            int VAtotalPositiveCasesIncrease = jsonobject.getInt("positiveIncrease");
+
+                            //VA Total Positive Cases
+
+                            TextView VAPositiveCases = findViewById(R.id.VACovidCasesNumber);
+                            String totalPositiveCases = String.valueOf(VAtotalPositiveCases);
+                            VAPositiveCases.setText("Total Positive Cases: " + totalPositiveCases);
+
+                            //VA Total Positive Cases Increase
+
+                            TextView VAPositiveCasesIncrease = findViewById(R.id.VACovidCasesIncrease);
+                            String totalPositiveCasesIncrease = String.valueOf(VAtotalPositiveCasesIncrease);
+                            VAPositiveCasesIncrease.setText("Total Positive Increase: " + totalPositiveCasesIncrease);
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+
+                        // Display the first 500 characters of the response string.
+                        //textView.setText("Response is: "+ response.substring(0,500));
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                //textView.setText("That didn't work!");
+            }
+        });
+
+        queue.add(VAstringRequest);
 
         submit.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -70,50 +124,7 @@ public class MainActivity extends AppCompatActivity  {
                 checkBox7.setChecked(false);
                 checkBox8.setChecked(false);
 
-                String url ="https://api.covidtracking.com/v1/states/va/current.json";
 
-                    Log.d("URL Variable",url);
-
-                // Request a string response from the provided URL.
-                StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                        new Response.Listener<String>() {
-                            @Override
-                            public void onResponse(String response) {
-
-                                JSONObject jsonobject = null;
-                                try {
-                                    jsonobject = new JSONObject(response);
-                                    Log.d("respon", response);
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
-                                try {
-                                    int totalpositiveCases = jsonobject.getInt("positive");
-
-                                    TextView USDeaths = findViewById(R.id.USCovidCasesNumber);
-                                    //USDeaths.setText("Total Positive Cases" + totalpositiveCases);
-                                    String totalPositiveCases = String.valueOf(totalpositiveCases);
-                                    USDeaths.setText("Total Positive Cases: " + totalpositiveCases);
-                                    Log.d("Deaths Variable", String.valueOf(totalpositiveCases));
-                                    //System.out.println(deaths);
-                                    //USDeaths.setText("This");
-
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
-
-
-                                // Display the first 500 characters of the response string.
-                                //textView.setText("Response is: "+ response.substring(0,500));
-                            }
-                        }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        //textView.setText("That didn't work!");
-                    }
-                });
-
-queue.add(stringRequest);
 
             }
 

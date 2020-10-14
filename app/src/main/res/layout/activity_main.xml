@@ -202,7 +202,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
-            android:text=""
+            android:text="Total Cases: 1,234,567"
             android:textStyle="bold"
             android:textSize="12sp"
             />
@@ -212,7 +212,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="Total Increase: 45,689"
+            android:text="Total Positive Increase: 125342"
             android:textStyle="bold"
             android:textSize="12sp"
             />
@@ -237,7 +237,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="Total Cases: 445,689"
+            android:text=""
             android:textStyle="bold"
             android:textSize="12sp"
             />
