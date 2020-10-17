@@ -14,6 +14,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONArray;
+import java.text.NumberFormat;
 
 
 public class MainActivity extends AppCompatActivity  {
@@ -26,7 +27,8 @@ public class MainActivity extends AppCompatActivity  {
         final Button submit = findViewById(R.id.submit);
         final SmsManager smgr = SmsManager.getDefault();
         final RequestQueue queue = Volley.newRequestQueue(this);
-
+        final NumberFormat numberFormat = NumberFormat.getInstance();
+              numberFormat.setGroupingUsed(true);
 
         String VAurl ="https://api.covidtracking.com/v1/states/va/current.json";
         String USurl = "https://api.covidtracking.com/v1/us/current.json";
@@ -57,13 +59,13 @@ public class MainActivity extends AppCompatActivity  {
                             //VA Total Positive Cases
 
                             TextView VAPositiveCases = findViewById(R.id.VACovidCasesNumber);
-                            String totalPositiveCases = String.valueOf(VAtotalPositiveCases);
+                            String totalPositiveCases = String.valueOf(numberFormat.format(VAtotalPositiveCases));
                             VAPositiveCases.setText("Total Positive Cases: " + totalPositiveCases);
 
                             //VA Total Positive Cases Increase
 
                             TextView VAPositiveCasesIncrease = findViewById(R.id.VACovidCasesIncrease);
-                            String totalPositiveCasesIncrease = String.valueOf(VAtotalPositiveCasesIncrease);
+                            String totalPositiveCasesIncrease = String.valueOf(numberFormat.format(VAtotalPositiveCasesIncrease));
                             VAPositiveCasesIncrease.setText("Total Positive Increase: " + totalPositiveCasesIncrease);
 
 
@@ -116,12 +118,12 @@ public class MainActivity extends AppCompatActivity  {
                             //US Total Positive Cases
 
                             TextView USPositiveCases = findViewById(R.id.USpositiveCases);
-                            USPositiveCases.setText("Total Positive Cases: " + UStotalPositiveCases);
+                            USPositiveCases.setText("Total Positive Cases: " + numberFormat.format(UStotalPositiveCases));
 
                             //US Total Positive Cases Increase
 
                             TextView USPositiveCasesIncrease = findViewById(R.id.USpositiveCasesIncrease);
-                            USPositiveCasesIncrease.setText("Total Positive Increase: " + UStotalPositiveCasesIncrease);
+                            USPositiveCasesIncrease.setText("Total Positive Increase: " + numberFormat.format(UStotalPositiveCasesIncrease));
 
 
                         } catch (JSONException e) {
@@ -177,14 +179,14 @@ public class MainActivity extends AppCompatActivity  {
                             //US Total Positive Cases
 
                             TextView WorldPositiveCases = findViewById(R.id.worldCovidCasesNumber);
-                            String worldtotalPositiveCases = String.valueOf(WorldtotalPositiveCases);
-                            WorldPositiveCases.setText("Total Positive Cases: " + WorldtotalPositiveCases);
+                            //String worldtotalPositiveCases = String.valueOf(numberFormat.format(WorldtotalPositiveCases));
+                            WorldPositiveCases.setText("Total Positive Cases: " + numberFormat.format(WorldtotalPositiveCases));
 
                             //US Total Positive Cases Increase
 
                             TextView WorldPositiveCasesIncrease = findViewById(R.id.worldCovidCasesIncrease);
-                            String worldtotalPositiveCasesIncrease = String.valueOf(WorldtotalPositiveCasesIncrease);
-                            WorldPositiveCasesIncrease.setText("Total Positive Increase: " + WorldtotalPositiveCasesIncrease);
+                            //String worldtotalPositiveCasesIncrease = String.valueOf(numberFormat.format(WorldtotalPositiveCasesIncrease));
+                            WorldPositiveCasesIncrease.setText("Total Positive Increase: " + numberFormat.format(WorldtotalPositiveCasesIncrease));
 
 
                         } catch (JSONException e) {
