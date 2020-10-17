@@ -59,14 +59,12 @@ public class MainActivity extends AppCompatActivity  {
                             //VA Total Positive Cases
 
                             TextView VAPositiveCases = findViewById(R.id.VACovidCasesNumber);
-                            String totalPositiveCases = String.valueOf(numberFormat.format(VAtotalPositiveCases));
-                            VAPositiveCases.setText("Total Positive Cases: " + totalPositiveCases);
+                            VAPositiveCases.setText("Total Positive Cases: " + VAtotalPositiveCases);
 
                             //VA Total Positive Cases Increase
 
                             TextView VAPositiveCasesIncrease = findViewById(R.id.VACovidCasesIncrease);
-                            String totalPositiveCasesIncrease = String.valueOf(numberFormat.format(VAtotalPositiveCasesIncrease));
-                            VAPositiveCasesIncrease.setText("Total Positive Increase: " + totalPositiveCasesIncrease);
+                            VAPositiveCasesIncrease.setText("Total Positive Increase: " + VAtotalPositiveCasesIncrease);
 
 
                         } catch (JSONException e) {
@@ -165,13 +163,7 @@ public class MainActivity extends AppCompatActivity  {
                             int WorldtotalPositiveCases = 0;
                             int WorldtotalPositiveCasesIncrease = 0;
 
-                            //for(int i=0; i<jsonarray.length(); i++){
 
-                                //JSONObject obj = jsonarray.getJSONObject(i);
-                                //WorldtotalPositiveCases = obj.getInt("positive");
-                                //WorldtotalPositiveCasesIncrease = obj.getInt("positiveIncrease");
-
-                            //}
                             WorldtotalPositiveCases = jsonobject.getJSONObject("Global").getInt("TotalConfirmed");
                             WorldtotalPositiveCasesIncrease = jsonobject.getJSONObject("Global").getInt("NewConfirmed");
 
@@ -179,13 +171,11 @@ public class MainActivity extends AppCompatActivity  {
                             //US Total Positive Cases
 
                             TextView WorldPositiveCases = findViewById(R.id.worldCovidCasesNumber);
-                            //String worldtotalPositiveCases = String.valueOf(numberFormat.format(WorldtotalPositiveCases));
                             WorldPositiveCases.setText("Total Positive Cases: " + numberFormat.format(WorldtotalPositiveCases));
 
                             //US Total Positive Cases Increase
 
                             TextView WorldPositiveCasesIncrease = findViewById(R.id.worldCovidCasesIncrease);
-                            //String worldtotalPositiveCasesIncrease = String.valueOf(numberFormat.format(WorldtotalPositiveCasesIncrease));
                             WorldPositiveCasesIncrease.setText("Total Positive Increase: " + numberFormat.format(WorldtotalPositiveCasesIncrease));
 
 
