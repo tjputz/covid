@@ -28,12 +28,11 @@ public class MainActivity extends AppCompatActivity  {
         final SmsManager smgr = SmsManager.getDefault();
         final RequestQueue queue = Volley.newRequestQueue(this);
         final NumberFormat numberFormat = NumberFormat.getInstance();
+              String VAurl ="https://api.covidtracking.com/v1/states/va/current.json";
+              String USurl = "https://api.covidtracking.com/v1/us/current.json";
+              String Worldurl = "https://api.covid19api.com/summary";
+
               numberFormat.setGroupingUsed(true);
-
-        String VAurl ="https://api.covidtracking.com/v1/states/va/current.json";
-        String USurl = "https://api.covidtracking.com/v1/us/current.json";
-        String Worldurl = "https://api.covid19api.com/summary";
-
 
         // Request a string response from the provided URL.
         StringRequest VAstringRequest = new StringRequest(Request.Method.GET, VAurl,
