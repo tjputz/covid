@@ -173,10 +173,6 @@ public class MainActivity extends AppCompatActivity  {
                             WorldtotalPositiveCases = jsonobject.getJSONObject("Global").getInt("TotalConfirmed");
                             WorldtotalPositiveCasesIncrease = jsonobject.getJSONObject("Global").getInt("NewConfirmed");
 
-                            //Log.d("totalconfirmed", String.valueOf(WorldtotalPositive));
-                            //Log.d("newconfirmed", String.valueOf(WorldtotalPositiveCasesIncrease));
-
-
                             //US Information
                             //US Total Positive Cases
 
