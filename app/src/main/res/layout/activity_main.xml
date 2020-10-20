@@ -238,7 +238,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="Total Positive Cases: "
+            android:text=""
             android:textStyle="bold"
             android:textSize="12sp"
             />
@@ -248,7 +248,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="Total Positive Increase: "
+            android:text=""
             android:textStyle="bold"
             android:textSize="12sp"
 
