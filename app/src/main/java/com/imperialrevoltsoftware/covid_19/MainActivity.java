@@ -55,12 +55,12 @@ public class MainActivity extends AppCompatActivity  {
                             //VA Total Positive Cases
 
                             TextView VAPositiveCases = findViewById(R.id.VACovidCasesNumber);
-                            VAPositiveCases.setText("Total Positive Cases: " + VAtotalPositiveCases);
+                            VAPositiveCases.setText("Total Positive Cases: " + numberFormat.format(VAtotalPositiveCases));
 
                             //VA Total Positive Cases Increase
 
                             TextView VAPositiveCasesIncrease = findViewById(R.id.VACovidCasesIncrease);
-                            VAPositiveCasesIncrease.setText("Total Positive Increase: " + VAtotalPositiveCasesIncrease);
+                            VAPositiveCasesIncrease.setText("Total Positive Increase: " + numberFormat.format(VAtotalPositiveCasesIncrease));
 
 
                         } catch (JSONException e) {
