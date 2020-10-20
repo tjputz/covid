@@ -2,8 +2,6 @@ package com.imperialrevoltsoftware.covid_19;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.telephony.SmsManager;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -25,7 +23,6 @@ public class MainActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_main);
 
         final Button submit = findViewById(R.id.submit);
-        final SmsManager smgr = SmsManager.getDefault();
         final RequestQueue queue = Volley.newRequestQueue(this);
         final NumberFormat numberFormat = NumberFormat.getInstance();
               String VAurl ="https://api.covidtracking.com/v1/states/va/current.json";
@@ -201,7 +198,7 @@ public class MainActivity extends AppCompatActivity  {
         submit.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
-                smgr.sendTextMessage("7036775881", null, "Covid Questions Done", null, null);
+
 
                 final CheckBox checkBox0 = findViewById(R.id.checkBox0);
                 final CheckBox checkBox1 = findViewById(R.id.checkBox1);
