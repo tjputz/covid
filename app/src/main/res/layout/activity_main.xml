@@ -89,7 +89,7 @@
                 android:textStyle="bold"
                 android:textColor="#FFFFFF"
                 android:layout_marginTop="0dp"
-                android:text="Had close contact with a person with confirmed virus?" />
+                android:text="Had close contact with a person with confirmed COVID-19?" />
 
             <CheckBox
                 android:id="@+id/checkBox8"
@@ -143,7 +143,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="Daily Virus Status"
+            android:text="Daily COVID-19 Status"
             android:textStyle="bold"
             android:textSize="20sp"
             android:textColor="#FFFFFF"
